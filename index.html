@@ -36,11 +36,59 @@
                     <li class="nav-item"><a class="nav-link" href="/contactus.html"><span
                                 class="fa fa-address-card fa-lg"></span>Contact</a></li>
                 </ul>
+                <!-- login button for right side -->
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span>Login
+                    </a>
+                </span>
+
             </div>
         </div>
     </nav>
     <!-- end of navbar -->
-
+    <!-- starting of login modal -->
+    <div class="modal fade" id="loginModal" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal Content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label for="exampleInputEmail3" class="sr-only">Email Address</label>
+                                <input type="email" class="form-control mr-1 form-control-sm" id="exampleInputEmail3"
+                                    placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="exampleInputPassword3" class="sr-only">Password</label>
+                                <input type="password" id="exampleInputPassword3"
+                                    class="form-control form-control-sm mr1" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input">
+                                    <label class="form-check-label">Remember Me</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto"
+                                data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary btn-sm ml-1">Sign In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of login modal -->
+    <!-- starting of header -->
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header align-self-center">
@@ -55,15 +103,16 @@
                     <img src="img/logo.png" class="img-fluid" alt="logo">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <!-- <button href="" class="btn btn-warning btn-lg btn-block">
-                        Reserve Table </button> -->
-                    <a href="#reserveTable" class="btn btn-warning btn-lg btn-block" role="button"
+
+                    <a href="#reserveTable" class="btn btn-warning btn-lg btn-block" role="button" data-toggle="tooltip"
+                        data-html="true" title="or Call us at <br><strong>+852 12345678</strong>" data-placement="top"
                         aria-disabled="true">Reserve
                         Table</a>
                 </div>
             </div>
         </div>
     </header>
+    <!-- end of header -->
 
     <!-- row-1 -->
     <div class="container">
@@ -270,6 +319,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 
 </html>
