@@ -55,3 +55,16 @@ body {
   bottom: 0px;
   z-index: 1;
 }
+
+.modal .modal-header {
+  background-color: #512da8;
+  color: #ddd;
+}
+
+.modal .modal-header .close {
+  color: #d1c4e9;
+}
+
+.modal .modal-body {
+  background-color: #d1c4e9;
+}
